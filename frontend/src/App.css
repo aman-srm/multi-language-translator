@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f5f1ed; /* warm cream */
+  color: #1f1b18;
+}
+
+.app-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.app-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #3e2f2f; /* dark brown */
+  letter-spacing: 1px;
+}
+
+.card {
+  background: #fff8f0; /* light beige */
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(60, 50, 50, 0.08);
+  margin-bottom: 40px;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px rgba(60, 50, 50, 0.15);
+}
+
+.input-text,
+.output-text {
+  width: 100%;
+  min-height: 180px;
+  border-radius: 18px;
+  border: 1px solid #d1bfa3; /* beige border */
+  padding: 20px;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  resize: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background: #fff6f0; /* subtle cream inside textarea */
+}
+
+.input-text:focus,
+.output-text:focus {
+  border-color: #a67c52; /* rich brown */
+  box-shadow: 0 0 12px rgba(166,124,82,0.3);
+  outline: none;
+}
+
+.language-select {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.translate-btn {
+  background: linear-gradient(135deg, #a67c52, #b5896f); /* warm gradient */
+  color: #fffaf5;
+}
+
+.translate-btn:hover {
+  background: linear-gradient(135deg, #8f5d36, #a67150);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.output-buttons {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.copy-btn {
+  background: #6b4f3b;
+  color: #fffaf5;
+}
+
+.copy-btn:hover {
+  background: #533a2a;
+  transform: translateY(-2px);
+}
+
+.speak-btn {
+  background: #b88b6f;
+  color: #fffaf5;
+}
+
+.speak-btn:hover {
+  background: #a37557;
+  transform: translateY(-2px);
+}
+
+.output-card {
+  min-height: 180px;
+  padding-right: 180px; /* space for buttons */
+}
+
+@media screen and (max-width: 768px) {
+  .language-select {
+    flex-direction: column;
+  }
+  .output-buttons {
+    position: static;
+    margin-top: 15px;
+  }
+}
